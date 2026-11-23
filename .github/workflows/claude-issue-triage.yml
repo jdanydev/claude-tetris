@@ -64,6 +64,23 @@ jobs:
             - Sé concreto: cita funciones reales de game.js (p. ej. collide, tryRotate, clearLines).
             - Si el issue es ambiguo, dilo en preguntas_abiertas en lugar de suponer.
 
+            Formato del texto (se publica tal cual en un comentario de GitHub):
+            - Escribe resumen, causa_probable, enfoque_sugerido, riesgos, motivo y cada
+              pregunta abierta en Markdown compatible con GitHub (GFM).
+            - Usa `backticks` para nombres de funciones, variables, archivos y valores
+              (p. ej. `collide()`, `dropInterval`, `game.js`).
+            - Usa listas con "- " o listas numeradas "1. " para pasos o varios puntos,
+              con una línea en blanco antes de la lista.
+            - Usa bloques de código con triple backtick y lenguaje (```js) para fragmentos
+              de código; nunca pegues código sin formato.
+            - Usa **negrita** para resaltar lo importante.
+            - No uses encabezados #, ## ni ###: el comentario ya tiene sus propias secciones.
+              Si necesitas subdividir, usa ####.
+            - motivo y cada pregunta abierta van dentro de un ítem de lista: escríbelos en
+              una sola línea, solo con Markdown en línea (backticks, negrita), sin listas
+              ni bloques de código.
+            - No uses HTML. En funciones y archivo devuelve solo el nombre, sin backticks.
+
             Labels disponibles:
             ${{ steps.labels.outputs.list }}
 
