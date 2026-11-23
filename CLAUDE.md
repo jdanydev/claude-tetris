@@ -34,4 +34,5 @@ Key conventions that span multiple functions:
 - `COLS × BLOCK` and `ROWS × BLOCK` must match the `<canvas id="board">` `width`/`height` in `index.html` (currently 300 × 600).
 - `drawNext()` assumes a 4×4 grid at 30px, matching `<canvas id="next-canvas">` at 120 × 120.
 - `game.js` grabs DOM elements by id (`board`, `next-canvas`, `score`, `lines`, `level`, `overlay`, `overlay-title`, `overlay-score`, `restart-btn`); renaming any id in `index.html` requires updating `game.js`.
+- Theming: colors in `style.css` are CSS variables in `:root` (dark, default) overridden by `[data-theme="light"]`. `game.js` `applyTheme()` sets `document.documentElement.dataset.theme`, caches `--grid` into `gridColor` for `drawGrid()`, and redraws; the `theme-toggle` button id is also referenced by `game.js`. New colors should be added as variables for both themes.
 - The overlay is shown/hidden by toggling the `hidden` class defined in `style.css`.
